@@ -1,0 +1,295 @@
+
+/* InstaHaul V2 -- also Arcify Insta whatever */
+/* Created by Kami */
+
+ :root {
+  --main-color: var(--arc-palette-focus); /* Whole colour of Insta - pink */
+  --text-color: white; /* The text colour */
+  --icons: white;
+  --hover: rgb(234, 130, 148);
+}
+
+/*-
+
+Please edit the above values to change all of
+InstaHaul, thank you. For this example, the colours
+will be pink for the background, white for the icons
+and black for the text. These values are customisable
+change them to whatever you please, and it will change
+everything on the insta site.
+
+-*/
+
+/*- To Do -*/
+/*
+
+Send / Messages page
+Main homepage
+Profile
+
+Refresh settings, add more to :root
+
+There will be issues, but I will update them accordingly.
+
+*/
+
+
+/*- Hiding Icons -*/
+/* Explore page */
+[href="\/explore\/"] > :first-child {
+  display: none !important;
+}
+
+/* InstaLogo */
+[tabindex="-\31 "] .x1useyqa,
+[tabindex="-\31 "] [style] > [style] > .x2lah0s {
+    display: none !important;
+  }
+
+/* Search */
+[aria-describedby="\:r4\:"] [href="\#"] > :first-child {
+  display: none !important;
+}
+
+/* Create */
+:nth-child(7) [href="\#"] > :first-child {
+  display: none !important;
+}
+
+/* Footer */
+section [role="contentinfo"] {
+  display: none !important;
+}
+
+/* Right nav */
+section [role="main"] .x3hkoc4 {
+  display: none !important;
+}
+
+/*- Settings (Bottom Nav) -*/
+/* Settings popup - Border */
+[role] .xurb0ha {
+  background-color: black !important;
+}
+    /* Settings popup - Icons */
+    [style="background-color\:\ rgb\(var\(--ig-banner-background\)\)\;"] > :first-child {
+      background-color: black !important;
+      /*border: 1px double wheat;*/
+    }
+
+/*- Reels Customisation -*/
+/* Videos / reels */
+section [role="main"] > :first-child {
+  background-color: var(--main-color) !important;
+}
+
+/* Left Nav */
+[tabindex="-\31 "] .xaeubzz {
+  background-color: var(--main-color) !important;
+}
+
+    /* text color */
+    .xh8yej3 [role="link"] [style="opacity\:\ 1\;"] [dir="auto"] {
+      color: var(--text-color) !important;
+    }
+
+    /* Icons */
+    [role="link"] [role="img"],
+    [aria-label="Notifications"] [d],
+    :nth-child(6) [href="\#"] .x1nhvcw1 :first-child,
+    [aria-label="Reels"] [fill-rule="evenodd"] {
+      color: var(--icons) !important;
+    }
+
+    /* send */
+    :first-child > [role="button"]:has([aria-label="Toggle\ selection"]),
+    [tabindex="-\31 "] [role="dialog"] .xfp8t6d {
+      background: var(--main-color) !important;
+    }
+
+    /* comments */
+    
+
+/* More at the bottom */
+  .xl5mz7h [href="\#"] [style="opacity\:\ 1\;"] [dir="auto"] {
+    color: var(--text-color) !important;
+  }
+
+/*- Homepage -*/
+/* posts top */
+:first-child:has(> [role="menu"] [aria-label="Next"]),
+article :first-child > :first-child:has(section),
+section form [aria-label="Add\ a\ comment…"],
+[role="button"]:has([aria-label="Comment"]),
+[role="button"]:has([aria-label="Like"]) {
+  background: var(--main-color) !important;
+}
+
+/* Comments */
+[role="dialog"] > div {
+  background-color: var(--main-color) !important;;
+}
+.x6ikm8r > .xdt5ytf,
+[style] > .x1iorvi4 * {
+  background: var(--main-color) !important;
+}
+    /* Text color */
+    .xsag5q8 [style="line-height\:\ var\(--base-line-clamp-line-height\)\;\ --base-line-clamp-line-height\:\ 18px\;"] {
+      color: var(--text-color) !important;
+    }
+
+    /* X / top right */
+    [role="dialog"] [role="dialog"] [role="button"]:has([aria-label="Close"]) {
+      background-color: var(--main-color) !important;
+    }
+
+    /* Comment on comments */
+    [tabindex="-\31 "] [role="dialog"] [role="dialog"] .x1ifbuhd,
+    [role="dialog"] [placeholder="Add\ a\ comment…"],
+    [aria-label="Add\ a\ comment…"] [data-lexical-text="true"] {
+      background-color: var(--main-color) !important;
+      color: var(--text-color) !important;
+    }
+
+    /* "post" button */
+    [role="dialog"] .x1iorvi4 {
+      background-color: var(--main-color) !important;
+    }
+
+    /* Icon/Pfp */
+    [role="dialog"] .x1ifbuhd > [style] > :first-child {
+      background-color: var(--main-color) !important;
+    }
+
+    /* Round comment borders */
+    [tabindex="-\31 "] [role="dialog"] :first-child:has([role="dialog"]) {
+      border-radius: 20px !important;
+    }
+
+    /* Likes counter */
+    .x1roi4f4 :first-child {
+      color: var(--text-color) !important;
+    }
+
+    /* See total comments */
+    [role="button"] > :first-child > [style="line-height\:\ var\(--base-line-clamp-line-height\)\;\ --base-line-clamp-line-height\:\ 16px\;"] {
+      color: var(--text-color) !important;
+    }
+
+/* Border/background for the sound icon (reels - top right) */
+  [role="presentation"] [role="button"] > .x1emribx > [role="button"] {
+  background-color: transparent !important;
+}
+
+
+/* Sent - when sending a video */
+._acba:has(p) {
+  background-color: var(--main-color) !important;
+}
+
+    /* Text color */
+      [style="background-color\:\ rgb\(0\,\ 0\,\ 0\)\;"] p {
+        color: var(--text-color) !important;
+      }
+
+/* Reactions on reel */
+[style$=" \31 6px\;"] :first-child {
+  color: var(--text-color) !important;
+}
+
+/* "Send" or share */
+[role="dialog"] [autocomplete="off"] {
+  background-color: var(--main-color) !important;
+  color: var(--text-color) !important;
+}
+
+  h1 :first-child {
+    color: var(--text-color) !important;
+  }
+
+    /* Reps name */
+    .x1s688f :first-child {
+      color: var(--text-color) !important;
+    }
+
+    /* Suggsted */
+    [role="dialog"] [style="display\:\ flex\;\ flex-direction\:\ column\;\ height\:\ 100\%\;\ max-width\:\ 100\%\;\ max-height\:\ 65vh\;"] .x2lah0s > [style="line-height\:\ var\(--base-line-clamp-line-height\)\;\ --base-line-clamp-line-height\:\ 18px\;"] {
+      /*color: var(--text-color) !important;*/
+      display: none !important;
+    }
+
+    /* Send to who? */
+    [role="dialog"] h4 {
+      color: var(--text-color) !important;
+    }
+
+    [role="dialog"] [autocomplete="off"] {
+      color: var(--text-color) !important;
+      border: 1px double white !important;
+    }
+
+    /* "Write a message" */
+    [role="dialog"] [role="dialog"] [style="display\:\ flex\;\ flex-direction\:\ column\;\ height\:\ 100\%\;\ max-width\:\ 100\%\;\ max-height\:\ 65vh\;"] [placeholder="Write\ a\ message\.\.\."] {
+      background-color: var(--main-color) !important;
+    }
+
+    /* Massive send button */
+    [role="dialog"] [role="dialog"] ._aah2 button {
+      background-color: var(--main-color) !important;
+      border: 1px double white !important;
+    }
+
+/*- Notifications -*/
+/* Main box */
+[tabindex="-\31 "] .x1dr59a3 {
+  background-color: var(--main-color) !important;
+}
+
+/* Text color */
+[style="opacity\:\ 1\;"] .x1lliihq {
+  color: var(--text-color) !important;
+}
+
+/* Left nav */
+[tabindex="-\31 "] :first-child > [style] > [style] {
+  background-color: var(--main-color) !important;
+}
+
+
+
+
+
+/*- Scrollbar -*/
+/* Dark Scrollbar*/
+::-webkit-scrollbar,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+    background: var(--main-color) !important;
+    width: 8px
+  }
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-button {
+    display: none !important;
+  }
+::-webkit-scrollbar-thumb,
+ ::-webkit-scrollbar-thumb {
+    background: #999 !important;
+    width: 8px !important;
+    border-radius: 10px;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:not(:active):hover,
+ ::-webkit-scrollbar-thumb:not(:active):hover {
+    background: #777 !important;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:hover:active,
+ ::-webkit-scrollbar-thumb:active,
+ ::-webkit-scrollbar-thumb:hover:active {
+    background: #5c5c5c !important;
+     transition: .1s !important;
+  }
+
+/*Well congrats, you made it to the end, have a cookie*/
