@@ -1,0 +1,336 @@
+:root {
+  --color-scheme: dark;
+  --background: #333333;
+  --header-color: #212121;
+  --dialog-background: #181818;
+  --dialog-border: white;
+  --text: #c4c4c4;
+  --title: #dad8d8;
+  --disabled: #520000;
+  --black: black;
+  --white: white;
+}
+
+[data-theme="light"] {
+  --color-scheme: light;
+  --background: #f9f9f9;
+  --header-color: white;
+  --dialog-background: #f9f9f9;
+  --dialog-border: #282828;
+  --text: #262626;
+  --title: #707070;
+  --disabled: #ffcaca;
+  --black: white;
+  --white: black;
+}
+
+[data-theme="dark"] {
+  --background: #333333;
+  --header-color: #212121;
+  --dialog-background: #181818;
+  --dialog-border: white;
+  --text: #c4c4c4;
+  --title: #dad8d8;
+  --disabled: #520000;
+  --black: black;
+  --white: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-scheme: light;
+  }
+}
+
+html,
+body {
+  background: var(--background);
+}
+
+.select select:not([multiple]) {
+  background: var(--background);
+  color: var(--text);
+  border-color: var(--white);
+  text-align: center;
+  align-content: center;
+}
+
+.control {
+  box-sizing: border-box;
+  clear: both;
+  font-size: 1rem;
+  position: relative;
+  text-align: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+  width: 118px;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.subtitle.is-4 {
+  color: var(--text);
+  font-size: 34px;
+  text-align: center;
+  margin: 0px auto 12px;
+}
+
+.toggle-settings-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.toggle-settings-bar .button {
+  flex-grow: 1;
+  padding: 25px;
+  transition: background-color 0.2s ease-in-out;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  background: var(--background);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.toggle-settings-bar .button:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 20px;
+  background-color: lightgrey;
+}
+
+.toggle-settings-bar .button:hover {
+  background-color: lightgrey;
+}
+
+.select select {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.select select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select::after {
+  border-color: var(--background) transparent transparent transparent;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.option.checkbox {
+  margin-bottom: 10px;
+}
+
+.option.checkbox label {
+  display: flex;
+  align-items: center;
+  color: var(--text);
+}
+
+.option.checkbox input {
+  margin-right: 10px;
+}
+
+#saveButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#status {
+  margin-right: 10px;
+  color: var(--text);
+}
+
+.option.checkbox label {
+  display: flex;
+  align-items: center;
+}
+
+.button.is-success.is-hovered,
+.button.is-success:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--disabled);
+}
+
+/*
+* Icons at the footer
+*/
+
+.social-icons {
+  max-width: 380px;
+  margin: 40px auto 0px;
+}
+
+.socialIcons {
+  margin: 40px auto 30px;
+}
+
+.icon {
+  float: left;
+  position: relative;
+  width: 19%;
+  height: 0;
+  margin: 1% 0.5%;
+  padding-bottom: 19%;
+}
+
+@media all and (min-width: 640px) {
+  .icon {
+    width: 9%;
+    padding-bottom: 9%;
+  }
+}
+
+.icon:last-of-type {
+  margin-right: 0;
+}
+
+.icon a {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.2s ease-out;
+}
+
+.icon a:hover {
+  background-color: #222;
+  background-size: 0%;
+  transition: all 0.2s ease-out;
+}
+
+.icon__name {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -7px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  filter: blur(25px);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.icon:hover .icon__name {
+  transition: all 0.3s ease-out;
+  opacity: 1;
+  filter: blur(0);
+}
+
+.icon--twitter a {
+  background-color: #00aced;
+  background-image: url("https://user-images.githubusercontent.com/103985728/249747744-118cbce4-e30f-4bc2-9288-fe4b920c55ac.png");
+}
+.icon--instagram a {
+  background-color: #405de6;
+  background-image: url("https://user-images.githubusercontent.com/103985728/249747723-2f2f2e96-6da1-4da5-a769-3e64d91f3537.svg");
+}
+
+.icon--spotify a {
+  background-color: #23e129;
+  background-image: url("https://user-images.githubusercontent.com/103985728/249748070-6c1e3fb6-77b5-42a9-bbd6-0493d1b8e83b.png");
+}
+
+.icon--github a {
+  background-color: #4078c0;
+  background-image: url("https://user-images.githubusercontent.com/103985728/249747735-5cfcdc11-aaa7-4b94-8102-b2dc3ffeede8.png");
+}
+
+.icon--help a {
+  background-color: #4078c0;
+  background-image: url("https://user-images.githubusercontent.com/103985728/249746862-6dbe9dc5-c3e7-4f16-a6a9-8ba0d8be7020.png");
+}
+
+/*
+.icon--flickr a {
+  background-color: #ff0084;
+  background-image: url("#");
+}
+
+.icon--soundcloud a {
+  background-color: #f60;
+  background-image: url("#");
+}
+
+.icon--songkick a {
+  background-color: #f80046;
+  background-image: url("#");
+}
+
+.icon--angellist a {
+  background-color: #eee;
+  background-image: url("#");
+  
+  .icon--linkedin a {
+    background-color: #007fb1;
+    background-image: url("#");
+  }
+  
+  .icon--codepen a {
+    background-color: #111;
+    background-image: url("#");
+  }
+
+}*/
+
+/*
+* END
+*/
