@@ -1,0 +1,523 @@
+/*
+
+All colour customisation for mangabuddy.com (a manga/manhua reader)
+
+Made by Kami!
+
+I wanna say made with love... BUT, it's very rough...
+
+Report issues if you've found any!
+
+*/
+
+/* Allow for Arc customisation */
+:root {
+  /*- Website main colours -*/
+  --sidebar-bg: var(--pure-black-color); /* --arc-background-simple-color */
+  --main-bg: var(--arc-palette-hover); /* --arc-palette-hover */
+
+  /*- Text colours -*/
+  --font-color: var(--arc-palette-title);
+  --font-color-two: var(--arc-palette-focus);
+
+  /*- Border colours -*/
+  --border-color: var(--arc-palette-minContrastColor);
+
+  /*- Icons -*/
+  --icons: #D6E0DE;
+
+  /*- Unused for now -*/
+  --gradient1: var(--arc-background-gradient-color0); 
+  --gradient2: var(--arc-background-gradient-color1);
+  --gradient3: var(--arc-background-gradient-color2);
+  --primary: var(--arc-palette-foregroundPrimary); 
+  --secondary: var(--arc-palette-foregroundSecondary);
+  --tertiary: var(--arc-palette-foregroundTertiary);
+  --contrast-color_dark: #2b2b2b;
+  --pure-black-color: #000000;
+  --main-container: #181818;
+  --main-gap: 15px;
+  --main-corner-radius: 10px;
+}
+
+/*- Manga Page (not the homepage) -*/
+/* Main page for manga/manhuas */
+div:has(#header #mobile-sidebar .sidebar__header) {
+  background-color: var(--sidebar-bg) !important;
+}
+  /* Content boxes */
+  .section > div {
+    background-color: var(--sidebar-bg) !important;
+  }
+  /* Breadcrums? Idk whatever the top bar thingo is */
+  .main-container .container #breadcrumbs-container .breadcrumbs-wrapper {
+  background-color: var(--sidebar-bg) !important;
+}
+  /* Colour */
+  #breadcrumbs-container .breadcrumbs-wrapper .breadcrumbs-item a {
+    color: var(--font-color) !important;
+  }
+  /* Name of manhua */
+  .container .col-70 .book-info .name {
+    background-color: var(--sidebar-bg) !important;
+  }
+    /* Colour -- fix this */ /*
+    .book-details .detail h1 {
+      background: -webkit-gradient(linear, left top, right top, from(#eaa555), to(#8e0a3a)) !important;
+      color: #000000 !important;
+    }*/
+  /* Stats */
+  .container .col-70 .book-info .meta {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--font-color) !important;
+  }
+  /* Thanks I know the website */
+  .section .tab-content .section-body [style="margin-bottom\:\ unset\;\ font-size\:\ 13px\;\ color\:\ \#4c4c4c\;\ padding\:\ 5px\ 10px\;"] {
+    display: none !important;
+  }
+  /* Summary / thing */
+  .col-70 .section .tab-content .section-body {
+    background-color: var(--sidebar-bg) !important;
+  }
+  .section .tab-content .section-body .content {
+    color: var(--font-color) !important;
+  }
+
+/*- Top bar -*/
+#header :nth-child(2):has(.container .align-items-center) {
+  background-color: var(--sidebar-bg) !important;
+}
+ .header {
+   display: flex !important;
+  align-content: center !important;
+  align-tracks: center !important;
+
+  box-align: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+ }
+  .chapter-info {
+    display: none !important;
+  }
+    /* Sorting */
+    .sort-options {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: center !important;
+      justify-content: center !important;
+      align-items: flex-start !important;
+      flex-direction: row-reverse !important;
+      border: 1px solid var(--border-color, pink) !important;
+      }
+
+        /* Sorting Locations */
+        div.sort-view {
+          align-items: baseline !important;
+          display: contents !important;
+        }
+        /* remove light toggle */
+        .container .header__links-list .header__links-item:has(.text) {
+          display: none !important;
+        }
+
+        /* Search box */
+body.dark-mode .header .top-bar #search input, .header .top-bar #search input, .header .top-bar #search {
+  background: var(--main-bg) !important;
+  border: 1px solid var(--border-color, pink) !important;
+  border-radius: 25px !important;
+  color: var(--main-bg) !important;
+  padding: 4px 37px 4px 10px !important;
+}
+    /* Icons */
+    .header .top-bar .user-avatar, .header .top-bar .m-bars .header__links-item:last-child, .header__links-item
+    .header__links-item.dark-mode-settings .text {
+      background: var(--main-bg) !important;
+      align-items: baseline !important;
+    }
+
+      /* Avatar */
+      .header .top-bar .m-bars {
+        padding-left: 0% !important;
+        align-items: center !important;
+      }
+
+      .header .top-bar .user-avatar {
+        font-size: 20px !important;
+      }
+
+      /* h1 */
+      .book-details .detail h1 {
+        padding: 12px !important;
+        /*background: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#da1b60)) !important;*/
+        font-size: x-large !important;
+        color: inherit !important;
+        text-shadow: green !important;
+      }
+
+      /* Book Icon */
+      .book-details .detail {
+        min-height: 355px !important;
+      }
+
+  /* Bookmarks Section Header */
+  a.btn {
+      border: 1px solid var(--border-color, pink) !important;
+  }
+
+    /* Bookmarks Actions Header */
+    body.dark-mode .nav-link, .profile .main__button.logout {
+        border: 1px solid var(--border-color, pink) !important;
+        color: pink !important; 
+   }
+
+   /* Bookmark text */
+   .bookmark-item .meta :last-child:has(.updated-date) {
+      color: var(--font-color) !important;
+    }
+
+
+  /* Profile Buttons */
+  button.button.main__button {
+    border: 1px solid var(--border-color, pink) !important;
+    background-color: var(--main-bg) !important;
+    color: pink !important;
+  }
+    /* Password */
+    form-group {
+      border: 1px solid var(--border-color, pink) !important;
+      background-color: var(--main-bg) !important;
+      color: pink !important;
+      padding: 14px 0 !important;
+    }
+
+  /* Notifications */
+  .notification-item span.status {
+    background-color: var(--main-bg) !important;
+    border: 3px solid var(--border-color, pink) !important;
+  }
+
+/* Notice Box - Hides What I Wish */
+div.notice-box, #footer, div.section-header, .header .top-bar .m-bars .header__links-item:last-child {
+  display: none !important;
+}
+
+/* Display & Use Full Screen Size */
+#viewer-page , #viewer-header, .top-bar, .bottom-bar, .d-flex, body.dark-mode .header__links-item>a {
+  display: -webkit-fill-available !important;
+  margin: 0% !important;
+}
+
+/* Header */
+.header .top-bar {
+  padding: 9px !important;
+  display: -webkit-fill-available !important;
+}
+    
+  /* Pop / Latest etc */
+  #header :nth-child(3):has(.container .header__links-list) {
+    background-color: var(--sidebar-bg) !important;
+  }
+  /* Colour */
+  #header .container .header__links-item > a,
+  .header__links-item [title] {
+    color: var(--font-color) !important;
+  }
+  .container .header__links-list .header__links-item > a:hover {
+    background-color: var(--main-bg) !important;
+  }
+  /* Logo */
+  .container .align-items-center .navbar-item strong {
+    display: none !important;
+  }
+  .container .align-items-center .navbar-item div::after {
+    content: "Boost made by Kami";
+    top: 50px !important;
+    right: 50px !important;
+    width: 200px !important;
+    height: 200px !important;
+    /*background-image: url("https://arc.net/reddit_boost_background.jpg");*/
+    background-size: contain !important;
+    color: var(--font-color-two) !important;
+  }
+  /* Search bar */
+  .container .align-items-center #search #input-header-search {
+    background-color: var(--main-bg) !important;
+  }
+  /* Search bar border */
+  [data-gr-ext-installed=""] input {
+    border: 1px solid var(--border-color, pink) !important;
+  }
+    /* Sorting Locations */
+    #header :nth-child(2):has(.container .align-items-center) {
+      align-items: baseline !important;
+      display: contents !important;
+    }
+  /* Icons */
+  .header__links-item i {
+    color: var(--icons) !important;
+  }
+
+/*- Home page -*/
+/* Latest update */
+.main-container .container .section-header:has(.title) {
+  background-color: var(--main-bg) !important;
+}
+/* Border */
+  .container .col-70 .section:has(.book-item),
+  .container .col-30 .section:has(.comment-item) {
+    background-color: var(--main-bg) !important;
+  }
+
+
+/*- Start page -*/
+/* Text colour */
+[data-gr-ext-installed=""] p {
+  color: var(--font-color);
+}
+  /* Filters */
+  .main-container .container .tags:has(.item) {
+    border: 1px double var(--border-color) !important;
+  }
+    /* Actual filters */
+    .main-container .container .tags .item {
+      border: 1px double var(--border-color) !important;
+      color: var(--font-color) !important;
+    }
+      /* Top searches */
+      .main-container .container .tags :first-child {
+        color: var(--font-color) !important;
+      }
+      /* Headings */
+      [data-gr-ext-installed=""] .main-container .container > h2 {
+        color: var(--font-color-two);
+      }
+      /* More headings */
+      [data-gr-ext-installed=""] .main-container .container h1 {
+        color: var(--font-color-two) !important;
+      }
+
+  /* Go to homepage */
+  [data-gr-ext-installed=""] .main-container .container [href="\/home"] {
+    background-color: var(--main-bg) !important;
+    border: 1px double black !important;
+    color: var(--font-color) !important;
+  }
+
+/*- Notifications -*/
+#profile-page .container .profile-menu:has(.flex-column),
+.container .profile-content .tab-content .list-item,
+.profile-content .tab-content :nth-child(3):has(.list-item) {
+  background-color: var(--sidebar-bg) !important;
+}
+  /* Elips */
+  .profile-content .tab-content .list-item i {
+    color: var(--font-color-two) !important;
+  }
+  /* Have i looked at it? */
+  .profile-content .tab-content .list-item .status {
+    background-color: var(--font-color) !important;
+  }
+  /* Clicking on it */
+  .main-container .container .section .section-body {
+    background-color: var(--font-color-two) !important;
+  }
+  /* Hovering */
+  .tab-content .list-item :last-child:has(.icon):hover,
+  .profile-content .tab-content .list-item .meta:hover,
+  .tab-content .list-item .meta .date:hover,
+  .tab-content .list-item .meta p:hover,
+  .tab-content .list-item .meta [style]:hover,
+  .tab-content .list-item .meta [src="\/static\/common\/images\/kiss_icon_active\.png"]:hover,
+  .container .section .nav :first-child:hover,
+  .profile-content .tab-content .list-item [href="\#"]:hover,
+  .profile-content .tab-content .list-item i:hover {
+    background-color: var(--main-bg) !important;
+    border-radius: 11px;
+  }
+  /* Left sidebar */
+  [role] .active {
+    background-color: var(--main-bg) !important;
+  }
+  /* Buttons */
+  .tab-content .btn,
+  .profile-content .tab-content [style^="display\: "] [style],
+  .tab-content [role="tabpanel"] #update-profile .button,
+  .tab-content [role="tabpanel"] [method="POST"] .button,
+  .container .section .sort-options a,
+  [style^="width\: "] a,
+  .main-container .container [style="display\:\ block\;\ text-align\:\ center\;"] [onchange],
+  .section-body .list-item .col-md-2 :first-child,
+  .container #comment-section #comment-user-info .button,
+  .container .main__button {
+    background-color: var(--main-bg) !important;
+    border-radius: 22px !important;
+    border: 1px double var(--border-color) !important;
+  }
+  /* Yuck borders! */
+  .container .profile-content .tab-content .list-item {
+    margin: 0px !important;
+    border-radius: 22px;
+    border: 1px double var(--border-color) !important;
+  }
+
+/*- Manga page thingo? Where you read it..  Where you spend most of your time reading -*/
+#viewer-page:has(.container #breadcrumbs-container .breadcrumbs-wrapper) {
+  background: var(--pure-black-color) !important; /* --main-bg originally */
+  /* background-image: url("https://arc.net/reddit_boost_background.jpg") !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: soft-light !important; */
+      
+}
+  #viewer-page .viewer__container .bottom-buttons .section,
+  .viewer__container #viewer-header .container .chapter__actions-wrapper {
+    background-color: var(--sidebar-bg) !important;
+  }
+    
+/*- Profile page -*/
+/* Heading colours */
+.profile-content .tab-content [role="tabpanel"] label,
+.tab-content [role="tabpanel"] #update-profile [style="padding\:\ 7px\ 0\;\ display\:\ inline-block"],
+[role="tabpanel"] #upload-avatar [style="display\:\ flex\;\ flex-direction\:\ column\;\ margin-left\:\ 20px\;"] > :first-child {
+  color: var(--font-color-two) !important;
+}
+  /* Context boxes / name / email etc */
+  [name] {
+    background-color: var(--main-bg) !important;
+    color: var(--font-color) !important;
+  }
+
+/*- Manga list -*/
+#profile-page .container .profile-content:has(.tab-content) {
+  background-color: var(--sidebar-bg) !important;
+}
+
+/*- History -*/
+.container .profile-content .tab-content [local-data="false"] {
+  background: var(--sidebar-bg) !important;
+}
+
+/*- Block genres -*/
+.container .profile-content .tab-content .block-genre-item {
+  background: var(--sidebar-bg) !important;
+}
+  /* Text */
+  .profile-content .tab-content .block-genre-item p {
+    color: var(--font-color-two) !important;
+  }
+
+/*- Reviews -*/
+.container .profile-content .tab-content .review-item {
+  background-color: var(--main-bg) !important;
+  margin: 0px !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/*- Popular Manga -*/
+.section .section-body .book-item .book-detailed-item {
+  background-color: var(--sidebar-bg) !important;
+  margin: 0px !important;
+  color: var(--font-color-two) !important;
+}
+  /* Summary */
+  .book-detailed-item p,
+  .main-container .container .section [style="margin-right\:\ 10px\;"] {
+  margin: 0px !important;
+  color: var(--font-color-two) !important;
+  }
+    /* Headings */
+    .book-detailed-item .meta .title a {
+      color: var(--font-color) !important;
+      margin: 0px !important;
+    }
+    /* Margin */
+    .book-item {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      padding-bottom: 0px !important;
+      border: 1px solid var(--border-color) !important;
+    }
+
+/*- Manga list -*/
+.section .list-item {
+  background-color: var(--sidebar-bg) !important;
+  margin: 0px !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/*- Comments -*/
+.main-container .container #comment-item > .comment-item,
+.main-container .container #comment-section:has(.section),
+#comment-section > :last-child > .comment-item:has(.author-type),
+.container #comment-section :nth-child(7):has(.avatar-letter),
+#update-profile [role="application"]:has(.tox-editor-container .tox-editor-header),
+.tox-editor-container .tox-editor-header [aria-disabled="false"]:has([tabindex="-\31 "]),
+#update-profile :nth-child(2):has(.tox-statusbar__text-container .tox-statusbar__path-item),
+#update-profile .tox-editor-container .tox-sidebar-wrap iframe,
+.tab-content [role="tabpanel"] [style="display\:\ block\;\ text-align\:\ center\;"]:has(.link),
+.container .profile-content .tab-content .comment-item,
+.comment-info .comment-summary,
+#comment-section #comment-list > .comment-item:has(.avatar-letter),
+#comment-section [role="application"] :nth-child(2):has(.tox-statusbar__text-container),
+[role="application"] .tox-editor-container .tox-sidebar-wrap iframe {
+  background-color: var(--main-bg) !important;
+  color: var(--font-color) !important;
+}
+  /* Bottom buttons / Actions */
+  .main-container .container #comment-section [style="display\:\ block\;\ text-align\:\ center\;"] {
+    background-color: var(--main-bg) !important;
+  }
+
+/*- Remove Items -*/
+/* Footer / bottom content bar */
+#footer:has(.container .content .main) {
+  display: none;
+}
+
+/* Notice / Rebuilding novel site */
+[data-gr-ext-installed=""] .container .notice-box:has(a) {
+  display: none;
+}
+  /* Thanks I got it */
+  .main-container .container [style="font-size\:\ 13px\;\ background-color\:\ transparent\;"]:has([href="\/official"]) {
+    display: none;
+  }
+  /* Ads bye! */
+  div.image-servers, div.social_share_wrapper {
+  display: none !important;
+}
+  /* I know the site, thanks */
+  .main-container .container > [style]:has([href="\/"]) {
+    display: none;
+  }
+
+/*- Recapture -*/
+.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact, div#login-recaptcha.g-recaptcha, div#login-recaptcha.g-recaptcha {
+  background: var(--main-bg) !important;
+  border: 1px solid var(--border-color, pink) !important;
+}
+  /* Recapture box */
+  .modal .modal-body, form.content.login-form {
+    background: var(--main-bg) !important;
+    border: 1px solid var(--border-color, pink) !important;
+  }
+
+
+/*- Chapter Loading -*/
+  .reading-box .chapter-image.loading {
+    background-color: var(--font-color-two) !important;
+    color: var(--font-color-two) !important;
+    }
+      /* Text Colour */
+      .reading-box .chapter-image span {
+        color: var(--tertiary, white) !important;
+        padding: 2px !important;
+        width: 100% !important;
+        font-size: 15px !important;
+      }
+        /* Loading Spacing */
+        .reading-box .chapter-image.loading span {
+          display: contents !important;
+        }
+
