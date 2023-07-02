@@ -1,0 +1,94 @@
+._31N0dvxfpsO6Ur5AKx4O5d,
+.right-sidebar,
+.left-sidebar-min {
+  background-color: #ffffff00 !important;
+  background-image: url("https://arc.net/reddit_boost_background.jpg") !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+}
+
+/* Make the UI larger? */
+#AppRouter-main-content > div > div > div._3ozFtOe6WpJEMUtxDOIvtU > div._31N0dvxfpsO6Ur5AKx4O5d > div._1OVBBWLtHoSPfGCRaPzpTf._3nSp9cdBpqL13CqjdMr2L_._2OVNlZuUd8L9v0yVECZ2iA {
+  width: 80rem !important;
+}
+
+/* I can't remember */
+._3obgdFz00GvpqpuX8QCsNK,
+._1npCwF50X2J7Wt82SZi6J0 {
+  background-color: grey !important;
+  background-image: url("https://arc.net/reddit_boost_background.jpg") !important;
+  background-size: cover;
+  background-attachment: fixed ;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+}
+
+/* Colour for main UI on reddit / comments / text colour etc */
+.uI_hDmU5GSiudtABRz_37,
+div .uI_hDmU5GSiudtABRz_37,
+#AppRouter-main-content ._2ulKn_zs7Y3LWsOqoFLHPo,
+#AppRouter-main-content ._2M2wOqmeoPVvcSsJ6Po9-V {
+ background-color: black !important;
+ color: rgb(229, 213, 213) !important;
+}
+
+  /* More UI comments */
+  ._2M2wOqmeoPVvcSsJ6Po9-V._3287nL7j7epK9JmDC3N1VR {
+    background-color: black !important;
+    color: rgb(229, 213, 213) !important;
+  }
+
+/*- Hiders -*/
+
+/* hide top notice */
+:first-child:has(> button .icon-close) {
+  display: none !important;
+}
+
+/* hide advitise button */
+[aria-label="Advertise"]:has(.icon) {
+  display: none !important;
+}
+
+/* hide reddit icon */
+[tabindex="-\31 "] header [aria-label="Home"]:has(svg) {
+  display: none !important;
+}
+
+/* hide popular and reddit coins */
+:first-child:has(> [href="\/r\/popular\/"] .icon) {
+  display: none !important;
+}
+
+/* homepage -- hide reddit premium */
+[data-testid="frontpage-sidebar"] [style] > :last-child:has(.icon-premium_fill) {
+  display: none !important;
+}
+
+/* homepage -- hide home context */
+[data-testid="frontpage-sidebar"] [style]:has([data-testid="no-edit-description-block"]) {
+  display: none !important;
+}
+
+/* homepage -- hide recent posts */
+[data-testid="frontpage-sidebar"] ._3Im6OD67aKo33nql4FpSp_:has(button) {
+  display: none !important;
+}
+
+/* homepage -- hide license stuff */
+[data-testid="frontpage-sidebar"] > :last-child:has([role="button"]) {
+  display: none !important;
+}
+
+/* homepage -- hide nav right */
+#AppRouter-main-content [data-testid="frontpage-sidebar"],
+[style]:has(> [data-testid="frontpage-sidebar"]) {
+  display: none !important;
+}
+
+/* hopefully hides suggested posts */
+[data-testid="post-container"] [data-click-id]:has(#subscribe-button-t3_14lxjfb) {
+  display: none !important;
+}
