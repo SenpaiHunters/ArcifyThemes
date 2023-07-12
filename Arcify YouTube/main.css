@@ -1,0 +1,479 @@
+/*
+Arcify YouTube + Extension support (fine tuned)
+
+More to come soon, made for extensions!
+
+Developed by Kami, and whoever made YouTube's CSS, 
+I will find you!
+*/
+
+:root {
+  --main-bg: var(--arc-palette-foregroundTertiary);
+  /*--arc-palette-foregroundTertiary*/
+  --main-border: 25px;
+  --main-icons: var(--arc-palette-maxContrastColor);
+}
+
+/* selected elements*/
+iron-selector [aria-selected="true"]
+{
+  background-color: var(--arc-palette-focus) !important;
+}
+/*hover menus*/
+/*comment sorting*/
+.ytd-comments-header-renderer #menu,
+/*video 3 dots*/
+.ytd-popup-container #contentWrapper ytd-menu-popup-renderer #items,
+/*dont remember*/
+.ytd-popup-container #items [is-selected=""] tp-yt-paper-item,
+#contentWrapper .dropdown-content #menu [focused=""],
+/*account*/
+.ytd-popup-container #contentWrapper .ytd-popup-container .ytd-multi-page-menu-renderer
+{
+  background-color: var(--arc-palette-hover) !important;  
+  border-width: 0px !important;
+    background-image: url("https://arc.net/reddit_boost_background.jpg") !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+}
+
+/* icons / buttons */
+.yt-multi-page-menu-section-renderer .content-icon #primary-icon [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+.ytd-compact-link-renderer #content-icon .ytd-compact-link-renderer [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+.ytd-topbar-logo-renderer .ytd-topbar-logo-renderer #logo-icon [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+ytd-mini-guide-entry-renderer .ytd-mini-guide-entry-renderer .ytd-mini-guide-entry-renderer [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+.ytd-guide-entry-renderer .ytd-guide-entry-renderer .ytd-guide-entry-renderer [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+#search #search-icon-legacy .ytd-searchbox [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+#container #voice-search-button .yt-spec-button-shape-next--icon-only-default div,
+#button #button .ytd-topbar-menu-button-renderer [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+.yt-spec-icon-badge-shape .yt-spec-icon-badge-shape__icon .yt-spec-icon-shape [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+ytd-masthead #container #logo span,
+#container #button #guide-icon [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+.yt-spec-button-shape-next--segmented-end [style],
+#dislike-button yt-button-shape [aria-label="Dislike\ this\ comment"] .yt-spec-touch-feedback-shape__fill
+{
+  color: var(--main-icons) !important;
+  
+}
+/* foreground secondary */
+yt-horizontal-list-renderer [style=""]
+{
+  background-color: var(--arc-palette-foregroundSecondary) !important;
+}
+/*foreground tertiary*/
+
+/* sidebar */
+#guide-inner-content,
+/* settings sidebar(the first one seems to do the background for every page)*/
+[dir="ltr"] [darker-dark-theme=""]:has(#content #masthead-container),
+#page-manager .ytd-page-manager ytd-settings-sidebar-renderer:has(#title),
+/* zoomed sidebar*/
+ytd-mini-guide-renderer,
+.ytd-mini-guide-entry-renderer:has(#icon),
+#guide-wrapper #guide-content #header:has(#guide-button),
+/* pages */
+#chips-wrapper,
+/*content grid*/
+.ytd-two-column-browse-results-renderer,
+/* top bar */
+ytd-masthead,
+#masthead-container ytd-masthead #container:has(#back-button),
+/* channel header*/
+#channel-header,
+#tabs-inner-container,
+.ytd-page-manager,
+/* Loading a playlist or adding to queue */
+#columns ytd-playlist-panel-renderer #container:has(#playlist-items),
+#container > .ytd-playlist-panel-renderer,
+.ytd-topbar-logo-renderer > #logo-icon [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+#masthead-container ytd-masthead #container .vidiq-toolbar-stats-container,
+ /* Playing a vid */
+  /* vidIQ #video-companion-root :nth-child(1), */
+  /* .video-companion-body > div, .video-companion-body > div .react-spinner-container, */
+  /* VidIQ Right hand extension */ 
+ section,
+.vc-stat-section .stat-box.alt,
+.vc-section header,
+
+/* notifications */
+#sections :first-child > #items ytd-notification-renderer,
+.ytd-popup-container .ytd-multi-page-menu-renderer :first-child:has(#buttons),
+
+/* profile page */
+#contentWrapper .ytd-popup-container #header ytd-active-account-header-renderer,
+#container #sections :nth-child(-n+5):has(#section-title),
+
+
+ /* Live chat / replay */
+yt-live-chat-header-renderer,
+yt-live-chat-renderer[hide-timestamps],
+#content-pages.yt-live-chat-renderer,
+yt-live-chat-renderer,
+#contents.yt-live-chat-app,
+/* Caramal */
+    :nth-child(9) [title=""],
+    #columns main,
+    section .w,
+    .l select,
+    /* Homepage thingo when scrolling */
+  ytd-app #content tp-yt-app-drawer #contentContainer,
+  /* The dropdown menu colour */
+    [lang="en"] [dir="ltr"] [data-testid="dropdown-menu"],
+    /*Shorts*/
+    .reel-video-in-sequence .ytd-reel-video-renderer .ytd-reel-video-renderer ytd-section-list-renderer,
+    .ytd-reel-video-renderer #header,
+    .player-container .html5-video-player .html5-video-container .video-stream,
+    .ytd-page-manager #columns ytd-live-chat-frame iframe,
+    .ytd-page-manager * #columns * ytd-live-chat-frame * iframe *,
+    #columns ytd-live-chat-frame #show-hide-button ytd-toggle-button-renderer,
+    [darker-dark-theme=""] * > [src] *,
+    #content * iframe,
+    .ytd-page-manager * #columns [modern-buttons=""] :first-child,
+    #header .ytd-engagement-panel-section-list-renderer #header:has([aria-label="Chapters"])
+{
+  /*background-image: url("https://arc.net/reddit_boost_background.jpg") !important;*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-color: var(--main-bg) !important;
+  backdrop-filter: hue-rotate(30deg) !important;
+}
+
+
+.video-companion-container header {
+    cursor: auto;
+    padding: 5px 5px !important;
+}
+
+/* remove share text/name */
+.ytd-watch-metadata ytd-button-renderer .yt-spec-button-shape-next--tonal [role="text"] {
+  display: none !important;
+}
+
+/* remove subscribed text/name */
+.ytd-subscribe-button-renderer yt-button-shape .yt-spec-button-shape-next--icon-leading-trailing .yt-spec-button-shape-next__button-text-content {
+  display: none !important;
+}
+
+ytd-app ytd-popup-container .ytd-popup-container #contentWrapper {
+  background-color: var(--main-bg) !important;
+  color: var(--main-bg) !important;
+}
+/*
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
+
+/* Recs Gone */
+#contents .ytd-item-section-renderer :first-child:has(#dismiss-button) {
+  display: none !important;
+}
+
+/* dividers begone */
+#sections ytd-guide-section-renderer #items ytd-guide-collapsible-section-entry-renderer,
+#guide-inner-content ytd-guide-renderer #sections ytd-guide-section-renderer, #footer > div
+{
+  border-width: 0px !important;
+}
+/*better looking scrollbars*/
+::-webkit-scrollbar-track 
+{
+  background: var(--main-bg);
+
+}
+/*to make sure youtube doesnt completely break in dark mode(mostly just makes text black again*/
+#sections yt-formatted-string,
+:last-child > yt-formatted-string,
+#text,
+ytd-section-list-renderer div,
+.ytd-c4-tabbed-header-renderer .ytd-c4-tabbed-header-renderer,
+.watch-active-metadata .ytd-watch-metadata,
+.ytd-video-owner-renderer :first-child,
+[tabindex="\30 "] > .style-scope,
+#main #header #header-author :first-child,
+.item .ytd-watch-metadata .ytd-watch-metadata [style],
+#rich-shelf-header #title-container #title-text #title,
+.ytd-rich-item-renderer #video-title,
+.ytd-grid-video-renderer .ytd-grid-video-renderer #text-metadata a,
+.grid-subheader .ytd-shelf-renderer,
+#container #meta .ytd-playlist-video-renderer #video-title,
+.ytd-item-section-renderer #title,
+.ytd-macro-markers-list-item-renderer h4,
+.item .ytd-watch-metadata .ytd-watch-metadata #collapse,
+.metadata .ytd-compact-video-renderer h3 .ytd-compact-video-renderer,
+[style="--ytd-horizontal-card-list-item-width\:\ 415px\;"] #title
+{
+  color: #000000 !important;
+}
+#like-button [style=""],
+#dislike-button [style=""],
+#reply-button-end [style=""]
+{
+  color: #000000 !important;
+}
+
+/* Border for buttons inside your videos page */
+#channel-header-container #inner-header-container #buttons .vidiq-c-jtgDwG,
+.yt-spec-button-shape-next--tonal [style=""] {
+    border: 1px solid var(--arc-palette-background) !important;
+    color: var(--arc-palette-background) !important;
+}
+
+/* YT Icon */ /*
+.ytd-masthead .ytd-topbar-logo-renderer > #logo-icon [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"] {
+  background-color: var(--main-bg) !important;
+  background: var(--main-bg) !important;
+}
+*/
+
+/* Video Player border */
+/* Round the video player */
+#container .html5-video-player .html5-video-container .video-stream {
+  border-radius: 10px !important;
+}
+
+  /*Current playing song/video*/
+    ytd-playlist-panel-video-renderer.ytd-playlist-panel-renderer:first-of-type {
+      background-color: var(--arc-palette-hover) !important;
+      border-radius: 25px !important;
+    }
+
+[selected=""] .ytd-playlist-panel-video-renderer .yt-icon-button:has(.ytd-menu-renderer),
+[selected=""] .ytd-playlist-panel-video-renderer .ytd-menu-renderer [style="width\:\ 100\%\;\ height\:\ 100\%\;\ fill\:\ currentcolor\;"],
+#container #items [selected=""] #menu {
+  color: black !important;
+  /*background-color: black !important;*/
+}
+
+/* Search bar */
+#container #search #search-form #container {
+ background-color: var(--main-bg) !important;
+ border: 0.5px double white !important;
+ color: black !important;
+ border-radius: var(--main-border) !important;
+}
+
+.video-companion-body .vidiq-video-companion-thumbnail-overlay {
+  border-radius: var(--main-border) !important;
+}
+
+/* Using the Vidiq extension - top of the bar */
+  #masthead-container ytd-masthead #container .vidiq-toolbar-stats-container {
+    border: 0.5px double white !important;
+    border-radius: var(--main-border) !important;
+  }
+
+    /* On Your Vids page */
+    #channel-header-container #inner-header-container #buttons .vidiq-dropdown-button {
+      background-color: var(--arc-palette-hover) !important;
+      border: 1px solid var(--arc-palette-background) !important;
+    }
+
+      /* "Top Keywords" */
+      #header .ytd-rich-grid-renderer #chips-wrapper .playlist-top-keywords-button,
+      #chips-wrapper #scroll-container iron-selector [aria-selected="true"],
+      #chips-wrapper #scroll-container iron-selector [aria-selected="false"] {
+        background-color: var(--arc-palette-hover) !important;
+        border: 1px solid var(--arc-palette-background) !important;
+        color: black !important;
+      }
+
+/* VidIQ */
+  .footer {
+    display: none !important;
+  }
+
+ 
+/* Contiuned! */ /* VidIQ */
+.vidiq-video-companion-thumbnail-img,
+#video-companion-root :nth-child(1),
+.stat-box,
+ .vc-engagement-dist,
+ .vc-engagement-dist.bar,
+ .div.bar.bar-yt,
+ .bar.bar-fb,
+ h1,
+ .triangle {
+  /*color: var(--main-bg) !important;*/
+ /* border: 0.2px solid var(--main-bg) !important;*/
+  margin: 0px !important;
+  /*outline: var(--main-bg) solid 1px !important;*/
+}
+
+/* VidIQ Text Colour */
+.stat-box-inner > [title] {
+  color: black !important;
+}
+
+  .section-contents .vc-stat-section [data-react-popover="VC_EngagementRatePopover"] .vidiq-engagement-rate-contents {
+    color: black !important;
+  }
+
+  /* Like counter colour */
+  #main #action-buttons .ytd-comment-action-buttons-renderer :nth-child(4) {
+    color: black !important;
+  }
+
+/* Hide unneeded upgrade trash */
+  .vc-section .section-contents .vc-stat-section [attachment="\[object\ Object\]"] {
+    display: none !important;
+  }
+
+   #video-companion-root .video-companion-container .video-companion-header:has(.toggle-collapse) {
+    display: none !important;
+  }
+
+  .seo-score-popover-upgrade {
+    display: none !important;
+  }
+
+  .section-contents .vc-optimization-checklist-container :last-child:has(.demonetization-header) {
+    display: none !important;
+  }
+
+  .section-contents .vc-stat-section :nth-child(3):has(.facebook-auth-button) {
+    display: none !important;
+  }
+
+
+
+/* Buttons on vod *//*
+  .ytd-watch-metadata .item .ytd-watch-metadata .vidiq-dropdown-button,
+  .ytd-watch-metadata yt-button-shape [aria-label="Analytics"] .yt-spec-touch-feedback-shape__fill,
+  #subscribe-button .ytd-watch-metadata [aria-label="Edit\ video"] .yt-spec-touch-feedback-shape__fill {
+  color: var(--main-bg) !important;
+  background: var(--main-bg) !important;
+  border: 0.2px solid var(--main-bg) !important;
+  margin: 0px !important;
+  }*/
+
+/* Countiuned */
+  .ytd-watch-metadata .ytd-video-owner-renderer .yt-spec-button-shape-next--filled /*analytics*/,
+  ytd-button-renderer yt-button-shape .yt-spec-button-shape-next--filled,
+  .ytd-watch-metadata .item .ytd-watch-metadata .vidiq-dropdown-button {
+    /*color: var(--arc-palette-hover) !important;*/
+    background: var(--arc-palette-hover) !important;
+    border: 0.2px solid black !important;
+    margin: -1px !important;
+  }
+
+  /* Make it align with the other elements */
+    .vidiq-video-page-menu {
+      margin-top: 5px !important;
+      margin-right: 14px !important;
+      border-radius: 22px !important;
+      cursor: auto !important;
+    }
+
+  /* Subscribbler count */
+  #header #header-author .video-page [data-tip-message] {
+    color: var(--main-bg) !important;
+    background: var(--main-bg) !important;
+    border: 0.7px solid var(--arc-palette-background) !important;
+    margin-right: 12px !important;
+  }
+
+    ytd-guide-renderer #sections ytd-guide-section-renderer:has(ytd-guide-collapsible-section-entry-renderer) {
+      margin-top: -20px !important;
+    }
+
+  #title select,
+  .ytd-item-section-renderer select,
+  select:not(:-internal-list-box),
+  .vidiq-comment-filter .vidiq-comment-filter-select,
+  ytd-comments-header-renderer
+ {
+  color: var(--main-bg) !important;
+  border: 0.2px solid var(--main-bg) !important;
+  margin: 0px !important; 
+  }
+
+  /* VidIQ Extension colours */
+    section [title],
+    .video-companion-container .video-companion-body .vc-section .section-heading {
+      color: black !important;
+    }
+
+/* Colour of timings on videos */
+    ytd-thumbnail-overlay-time-status-renderer #text {
+      color: white !important;
+    }
+
+  /* Using the looper extension */
+  #top-level-buttons-computed #loop-button .yt-spec-button-shape-next #text {
+    display: none !important;
+  }
+    .yt-spec-button-shape-next .yt-spec-button-shape-next__icon #button .yt-icon-container {
+      left: 5px !important;
+    }
+
+    /* Translater U\S */
+    #top-level-buttons-computed .ytd-menu-renderer .yt-spec-button-shape-next > span {
+      display: none !important;
+    }
+      #top-level-buttons-computed .ytd-menu-renderer .yt-spec-button-shape-next [src="data\:image\/png\;base64\,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABxElEQVRIS9WUPShGURjHXyllkI8UsbAZGAwGRfkaiEE\+JqPF5CMxkO\/JpiwWlFI2SQYWb8mgKDEQRT4WBpSY\/f46p6773uvei3dw6tf5uM99\/s9zznNOSizJLSXJ\/mNBAoUEUA8rPw0kSKAVxxNQ\/luBdBw0QarLUQXzThiGNMiHW2NzSX8cJGwzKMNwCdwZSTgX7iAb8uDcON2n7wsrEGSn7wNQDW1hjK2N3xmUYnAF7w5na4wvYPwvBDZwcggzxlkG\/T2oorQeuvll0IyHZSiBJ5iGOqhyec5ivgpd8OKl\+l2ZbvHDG8zBjon\+wOVkkrnKeAo0TmjfCahijiAHRoyQ00Emk2uYB1VTMTy7FfwEtOdDMGhS1\/73gjMDRdwA2ra4ISELK6B6bwE9DZXQCKdGQP2oifKMfhskOAu66btQC\+teWTgv2gIGj3ACm\+CuFm1JB\+gu1IBudgHYFmcgJh1rgY\+d09aO7d63m\+jtumcWQY\+dl4AyVQZjHh8V\/R702G9RBRT9A9zAq4eAiqMI9Ch\+VlRUAUVoK8crO63pHIRsIwn47b1b6MtZRMlAT3o\/dPuF7lhfZKwX4DSKQAi\/iSb\/X\+ADLotQGW\+E47QAAAAASUVORK5CYII\="] {
+        left: 8px !important;
+      }
+
+/* Using the 'ImprovedTube' extension */
+#masthead-container ytd-masthead #container .it-button {
+ background-color: var(--main-bg) !important;
+ border: 0.5px double white !important;
+ color: black !important;
+ border-radius: var(--main-border) !important;
+}
+    
+    /* VidIQ Subscriber count */
+    .vidiq-subscriber-count,
+    .vidiq-subscriber-count.new-layout {
+      border: 1px solid black !important;
+      right: 3px !important;
+      padding-left: 3px !important;
+      border-radius: var(--main-border) !important;
+      margin: 5px !important;
+    }
+
+    button.yt-icon-button,
+    yt-icon-button {
+      color: black !important;
+    }
+
+/* VidIQ collpased */
+.video-companion-container .video-companion-body .vc-section-overview header {
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+}
+
+.video-companion-container .video-companion-body .vc-section-channel-tags header {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+/* Caramal */
+    :nth-child(9) [title=""],
+    #columns main,
+    section .w,
+    .l select {
+      color: black !important;
+    }
+
+/* Homepage */
+ytd-rich-grid-row #contents.ytd-rich-grid-row {
+  display: contents !important;
+}
+/* Yeet the fucking search outa here again */
+ytd-masthead #container #search #search-icon-legacy {
+  display: none !important;
+}
